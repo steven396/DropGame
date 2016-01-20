@@ -16,6 +16,10 @@
     CCArray * spiders;
     float spiderDropInterval;
     int numOfMovedSpiders;
+    
+    ccTime totalTime;
+    int score;
+    CCLabelBMFont * scoreLabel;
 }
 
 +(id)scene;

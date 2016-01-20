@@ -30,6 +30,14 @@
         
         [self scheduleUpdate];
         [self initSpiders];
+        
+        scoreLabel = [CCLabelBMFont labelWithString:@"0" fntFile:@"bitmapfont.fnt"];
+		scoreLabel.position = CGPointMake(screenSize.width / 2, screenSize.height);
+		
+		scoreLabel.anchorPoint = CGPointMake(0.5f, 1.0f);
+		[self addChild:scoreLabel z:-1];
+        
+        
     }
     return self;
 }
@@ -64,6 +72,10 @@
     }
     [self unschedule:@selector(spiderUpdate:)];
     [self schedule:@selector(spiderUpdate:) interval:1.1f];
+    
+    totalTime = 0;
+    score = 0;
+    [scoreLabel setString:@"0"];
 }
 
 -(void)spiderUpdate:(ccTime)delta{
@@ -127,6 +139,13 @@
     }
     alien.position = pos;
     [self checkDistance];
+    
+    totalTime += delta;
+    int currenTime = (int)totalTime;
+    if (score < currenTime) {
+        score = currenTime;
+        [scoreLabel setString:[NSString stringWithFormat:@"%d",score]];
+    }
 }
 
 -(void)checkDistance{
