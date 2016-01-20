@@ -141,6 +141,15 @@
 		F8B81BA11C4FBCB800C779C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B81BA01C4FBCB800C779C4 /* AppDelegate.m */; };
 		F8B81BA41C4FBCB800C779C4 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B81BA31C4FBCB800C779C4 /* HelloWorldLayer.m */; };
 		F8B81BA71C4FBCB800C779C4 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B81BA61C4FBCB800C779C4 /* IntroLayer.m */; };
+		F8B81BB61C4FBDA700C779C4 /* alien-sfx.caf in Resources */ = {isa = PBXBuildFile; fileRef = F8B81BAD1C4FBDA700C779C4 /* alien-sfx.caf */; };
+		F8B81BB71C4FBDA700C779C4 /* alien.png in Resources */ = {isa = PBXBuildFile; fileRef = F8B81BAE1C4FBDA700C779C4 /* alien.png */; };
+		F8B81BB81C4FBDA700C779C4 /* bitmapfont.fnt in Resources */ = {isa = PBXBuildFile; fileRef = F8B81BAF1C4FBDA700C779C4 /* bitmapfont.fnt */; };
+		F8B81BB91C4FBDA700C779C4 /* bitmapfont.hiero in Resources */ = {isa = PBXBuildFile; fileRef = F8B81BB01C4FBDA700C779C4 /* bitmapfont.hiero */; };
+		F8B81BBA1C4FBDA700C779C4 /* bitmapfont.png in Resources */ = {isa = PBXBuildFile; fileRef = F8B81BB11C4FBDA700C779C4 /* bitmapfont.png */; };
+		F8B81BBB1C4FBDA700C779C4 /* blues.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F8B81BB21C4FBDA700C779C4 /* blues.mp3 */; };
+		F8B81BBC1C4FBDA700C779C4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F8B81BB31C4FBDA700C779C4 /* Default.png */; };
+		F8B81BBD1C4FBDA700C779C4 /* fps_images.png in Resources */ = {isa = PBXBuildFile; fileRef = F8B81BB41C4FBDA700C779C4 /* fps_images.png */; };
+		F8B81BBE1C4FBDA700C779C4 /* spider.png in Resources */ = {isa = PBXBuildFile; fileRef = F8B81BB51C4FBDA700C779C4 /* spider.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -425,6 +434,15 @@
 		F8B81BA31C4FBCB800C779C4 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		F8B81BA51C4FBCB800C779C4 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		F8B81BA61C4FBCB800C779C4 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
+		F8B81BAD1C4FBDA700C779C4 /* alien-sfx.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "alien-sfx.caf"; path = "Resources/alien-sfx.caf"; sourceTree = "<group>"; };
+		F8B81BAE1C4FBDA700C779C4 /* alien.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = alien.png; path = Resources/alien.png; sourceTree = "<group>"; };
+		F8B81BAF1C4FBDA700C779C4 /* bitmapfont.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bitmapfont.fnt; path = Resources/bitmapfont.fnt; sourceTree = "<group>"; };
+		F8B81BB01C4FBDA700C779C4 /* bitmapfont.hiero */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bitmapfont.hiero; path = Resources/bitmapfont.hiero; sourceTree = "<group>"; };
+		F8B81BB11C4FBDA700C779C4 /* bitmapfont.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bitmapfont.png; path = Resources/bitmapfont.png; sourceTree = "<group>"; };
+		F8B81BB21C4FBDA700C779C4 /* blues.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = blues.mp3; path = Resources/blues.mp3; sourceTree = "<group>"; };
+		F8B81BB31C4FBDA700C779C4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
+		F8B81BB41C4FBDA700C779C4 /* fps_images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fps_images.png; path = Resources/fps_images.png; sourceTree = "<group>"; };
+		F8B81BB51C4FBDA700C779C4 /* spider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spider.png; path = Resources/spider.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -501,6 +519,15 @@
 		F8B81A0F1C4FBCB600C779C4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F8B81BAD1C4FBDA700C779C4 /* alien-sfx.caf */,
+				F8B81BAE1C4FBDA700C779C4 /* alien.png */,
+				F8B81BAF1C4FBDA700C779C4 /* bitmapfont.fnt */,
+				F8B81BB01C4FBDA700C779C4 /* bitmapfont.hiero */,
+				F8B81BB11C4FBDA700C779C4 /* bitmapfont.png */,
+				F8B81BB21C4FBDA700C779C4 /* blues.mp3 */,
+				F8B81BB31C4FBDA700C779C4 /* Default.png */,
+				F8B81BB41C4FBDA700C779C4 /* fps_images.png */,
+				F8B81BB51C4FBDA700C779C4 /* spider.png */,
 				F8B81A101C4FBCB600C779C4 /* Default.png */,
 				F8B81A121C4FBCB600C779C4 /* Default@2x.png */,
 				F8B81A141C4FBCB600C779C4 /* Default-568h@2x.png */,
@@ -931,6 +958,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8B81A211C4FBCB600C779C4 /* Icon.png in Resources */,
+				F8B81BBA1C4FBDA700C779C4 /* bitmapfont.png in Resources */,
+				F8B81BBB1C4FBDA700C779C4 /* blues.mp3 in Resources */,
+				F8B81BB61C4FBDA700C779C4 /* alien-sfx.caf in Resources */,
 				F8B81B7F1C4FBCB800C779C4 /* ChangeLog in Resources */,
 				F8B81A131C4FBCB600C779C4 /* Default@2x.png in Resources */,
 				F8B81A1D1C4FBCB600C779C4 /* Icon-Small.png in Resources */,
@@ -938,10 +968,16 @@
 				F8B81A111C4FBCB600C779C4 /* Default.png in Resources */,
 				F8B81A1B1C4FBCB600C779C4 /* Icon-Small-50.png in Resources */,
 				F8B81A261C4FBCB600C779C4 /* iTunesArtwork in Resources */,
+				F8B81BBC1C4FBDA700C779C4 /* Default.png in Resources */,
+				F8B81BB91C4FBDA700C779C4 /* bitmapfont.hiero in Resources */,
+				F8B81BBE1C4FBDA700C779C4 /* spider.png in Resources */,
 				F8B81A1F1C4FBCB600C779C4 /* Icon-Small@2x.png in Resources */,
 				F8B81A171C4FBCB600C779C4 /* Default-Landscape~ipad.png in Resources */,
+				F8B81BB81C4FBDA700C779C4 /* bitmapfont.fnt in Resources */,
+				F8B81BB71C4FBDA700C779C4 /* alien.png in Resources */,
 				F8B81A151C4FBCB600C779C4 /* Default-568h@2x.png in Resources */,
 				F8B81A231C4FBCB600C779C4 /* Icon@2x.png in Resources */,
+				F8B81BBD1C4FBDA700C779C4 /* fps_images.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
