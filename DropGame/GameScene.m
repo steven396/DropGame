@@ -126,6 +126,24 @@
         alienVelocity = CGPointZero;
     }
     alien.position = pos;
+    [self checkDistance];
+}
+
+-(void)checkDistance{
+    float alienWidth = [alien texture].contentSize.width;
+    float spiderWidth = [[spiders lastObject]texture].contentSize.width;
+    float maxDistance = alienWidth * 0.4f + spiderWidth * 0.4f;
+    int numOfSpiders = [spiders count];
+    for (int i = 0; i < numOfSpiders; i++) {
+        CCSprite * spider = [spiders objectAtIndex:i];
+        if ([spider numberOfRunningActions] == 0) {
+            continue;
+        }
+        float currentDistance = ccpDistance(alien.position, spider.position);
+        if (currentDistance < maxDistance) {
+            [self resetSpiders];
+        }
+    }
 }
 
 -(void)dealloc{
