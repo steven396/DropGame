@@ -139,8 +139,6 @@
 		F8B81B991C4FBCB800C779C4 /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = F8B81B981C4FBCB800C779C4 /* vec4.c */; };
 		F8B81B9E1C4FBCB800C779C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B81B9D1C4FBCB800C779C4 /* main.m */; };
 		F8B81BA11C4FBCB800C779C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B81BA01C4FBCB800C779C4 /* AppDelegate.m */; };
-		F8B81BA41C4FBCB800C779C4 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B81BA31C4FBCB800C779C4 /* HelloWorldLayer.m */; };
-		F8B81BA71C4FBCB800C779C4 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B81BA61C4FBCB800C779C4 /* IntroLayer.m */; };
 		F8B81BB61C4FBDA700C779C4 /* alien-sfx.caf in Resources */ = {isa = PBXBuildFile; fileRef = F8B81BAD1C4FBDA700C779C4 /* alien-sfx.caf */; };
 		F8B81BB71C4FBDA700C779C4 /* alien.png in Resources */ = {isa = PBXBuildFile; fileRef = F8B81BAE1C4FBDA700C779C4 /* alien.png */; };
 		F8B81BB81C4FBDA700C779C4 /* bitmapfont.fnt in Resources */ = {isa = PBXBuildFile; fileRef = F8B81BAF1C4FBDA700C779C4 /* bitmapfont.fnt */; };
@@ -150,6 +148,7 @@
 		F8B81BBC1C4FBDA700C779C4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F8B81BB31C4FBDA700C779C4 /* Default.png */; };
 		F8B81BBD1C4FBDA700C779C4 /* fps_images.png in Resources */ = {isa = PBXBuildFile; fileRef = F8B81BB41C4FBDA700C779C4 /* fps_images.png */; };
 		F8B81BBE1C4FBDA700C779C4 /* spider.png in Resources */ = {isa = PBXBuildFile; fileRef = F8B81BB51C4FBDA700C779C4 /* spider.png */; };
+		F8B81BC11C4FBDED00C779C4 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B81BC01C4FBDED00C779C4 /* GameScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -430,10 +429,6 @@
 		F8B81B9D1C4FBCB800C779C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F8B81B9F1C4FBCB800C779C4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F8B81BA01C4FBCB800C779C4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F8B81BA21C4FBCB800C779C4 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		F8B81BA31C4FBCB800C779C4 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
-		F8B81BA51C4FBCB800C779C4 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
-		F8B81BA61C4FBCB800C779C4 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
 		F8B81BAD1C4FBDA700C779C4 /* alien-sfx.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "alien-sfx.caf"; path = "Resources/alien-sfx.caf"; sourceTree = "<group>"; };
 		F8B81BAE1C4FBDA700C779C4 /* alien.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = alien.png; path = Resources/alien.png; sourceTree = "<group>"; };
 		F8B81BAF1C4FBDA700C779C4 /* bitmapfont.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bitmapfont.fnt; path = Resources/bitmapfont.fnt; sourceTree = "<group>"; };
@@ -443,6 +438,8 @@
 		F8B81BB31C4FBDA700C779C4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
 		F8B81BB41C4FBDA700C779C4 /* fps_images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fps_images.png; path = Resources/fps_images.png; sourceTree = "<group>"; };
 		F8B81BB51C4FBDA700C779C4 /* spider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spider.png; path = Resources/spider.png; sourceTree = "<group>"; };
+		F8B81BBF1C4FBDED00C779C4 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		F8B81BC01C4FBDED00C779C4 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -505,10 +502,8 @@
 			children = (
 				F8B81B9F1C4FBCB800C779C4 /* AppDelegate.h */,
 				F8B81BA01C4FBCB800C779C4 /* AppDelegate.m */,
-				F8B81BA21C4FBCB800C779C4 /* HelloWorldLayer.h */,
-				F8B81BA31C4FBCB800C779C4 /* HelloWorldLayer.m */,
-				F8B81BA51C4FBCB800C779C4 /* IntroLayer.h */,
-				F8B81BA61C4FBCB800C779C4 /* IntroLayer.m */,
+				F8B81BBF1C4FBDED00C779C4 /* GameScene.h */,
+				F8B81BC01C4FBDED00C779C4 /* GameScene.m */,
 				F8B81A0F1C4FBCB600C779C4 /* Resources */,
 				F8B81A271C4FBCB600C779C4 /* libs */,
 				F8B81B9B1C4FBCB800C779C4 /* Supporting Files */,
@@ -1036,7 +1031,6 @@
 				F8B81B111C4FBCB700C779C4 /* CCES2Renderer.m in Sources */,
 				F8B81A831C4FBCB700C779C4 /* CCLabelAtlas.m in Sources */,
 				F8B81A9F1C4FBCB700C779C4 /* CCParallaxNode.m in Sources */,
-				F8B81BA71C4FBCB800C779C4 /* IntroLayer.m in Sources */,
 				F8B81A371C4FBCB600C779C4 /* CCActionGrid.m in Sources */,
 				F8B81A801C4FBCB700C779C4 /* CCGrid.m in Sources */,
 				F8B81B8F1C4FBCB800C779C4 /* quaternion.c in Sources */,
@@ -1068,6 +1062,7 @@
 				F8B81B261C4FBCB800C779C4 /* CCGLView.m in Sources */,
 				F8B81B5A1C4FBCB800C779C4 /* CDOpenALSupport.m in Sources */,
 				F8B81A3D1C4FBCB600C779C4 /* CCActionInstant.m in Sources */,
+				F8B81BC11C4FBDED00C779C4 /* GameScene.m in Sources */,
 				F8B81A5E1C4FBCB700C779C4 /* CCClippingNode.m in Sources */,
 				F8B81AE21C4FBCB700C779C4 /* CCTexture2D.m in Sources */,
 				F8B81AF71C4FBCB700C779C4 /* CCTMXTiledMap.m in Sources */,
@@ -1081,7 +1076,6 @@
 				F8B81B851C4FBCB800C779C4 /* matrix.c in Sources */,
 				F8B81A6B1C4FBCB700C779C4 /* CCDrawingPrimitives.m in Sources */,
 				F8B81AD31C4FBCB700C779C4 /* ccShaders.m in Sources */,
-				F8B81BA41C4FBCB800C779C4 /* HelloWorldLayer.m in Sources */,
 				F8B81B291C4FBCB800C779C4 /* CCWindow.m in Sources */,
 				F8B81B071C4FBCB700C779C4 /* cocos2d.m in Sources */,
 				F8B81AB41C4FBCB700C779C4 /* CCProgressTimer.m in Sources */,
