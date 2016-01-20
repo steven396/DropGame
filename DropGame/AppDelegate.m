@@ -20,7 +20,8 @@
 	
 	// iPhone only
 	if( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone )
-		return UIInterfaceOrientationMaskLandscape;
+//		return UIInterfaceOrientationMaskLandscape;
+        return UIInterfaceOrientationMaskPortrait;
 	
 	// iPad only
 	return UIInterfaceOrientationMaskLandscape;
