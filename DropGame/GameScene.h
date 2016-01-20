@@ -10,7 +10,7 @@
 #import "cocos2d.h"
 
 @interface GameScene : CCLayer {
-    
+    CCSprite * alien;
 }
 +(id)scene;
 @end
