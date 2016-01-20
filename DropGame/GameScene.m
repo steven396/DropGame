@@ -29,9 +29,73 @@
         [self addChild:alien z:0 tag:1];
         
         [self scheduleUpdate];
-        
+        [self initSpiders];
     }
     return self;
+}
+
+-(void)initSpiders{
+    CGSize screenSize = [[CCDirector sharedDirector]winSize];
+    CCSprite * tempSpider = [CCSprite spriteWithFile:@"spider.png"];
+    float spiderWidth = [tempSpider texture].contentSize.width;
+    int numOfSpiders = screenSize.width / spiderWidth;
+    spiders = [[CCArray alloc]initWithCapacity:numOfSpiders];
+    for (int i = 0; i < numOfSpiders; i++) {
+        CCSprite * spider = [CCSprite spriteWithFile:@"spider.png"];
+        [spiders addObject:spider];
+        [self addChild:spider z:0 tag:2];
+    }
+    [self resetSpiders];
+}
+
+-(void)resetSpiders{
+    numOfMovedSpiders = 0;
+    spiderDropInterval = 6.0f;
+    
+    CGSize screenSize = [[CCDirector sharedDirector]winSize];
+    CCSprite * tempSpider = [CCSprite spriteWithFile:@"spider.png"];
+    float spiderWidth = [tempSpider texture].contentSize.width;
+    float spiderHeight = [tempSpider texture].contentSize.height;
+    int numOfSpiders = [spiders count];
+    for (int i = 0; i < numOfSpiders; i++) {
+        CCSprite * spider = [spiders objectAtIndex:i];
+        spider.position = CGPointMake(spiderWidth * 0.5 + i * spiderWidth, screenSize.height + spiderHeight * 0.5);
+        [spider stopAllActions];
+    }
+    [self unschedule:@selector(spiderUpdate:)];
+    [self schedule:@selector(spiderUpdate:) interval:1.1f];
+}
+
+-(void)spiderUpdate:(ccTime)delta{
+    for (int i = 0; i < 25; i++) {//如果所有蜘蛛都在动，则程序会死循环，此处设置个尝试的最大值，尝试25次后跳过此次更新
+        int randNum = CCRANDOM_0_1() * [spiders count];
+        CCSprite * spider = [spiders objectAtIndex:randNum];
+        if ([spider numberOfRunningActions] == 0) {
+            [self makeThisSpiderMove:spider];
+            break;
+        }
+    }
+}
+
+-(void)makeThisSpiderMove:(CCSprite *)spider{
+    numOfMovedSpiders++;
+    if (numOfMovedSpiders % 5 == 0 && spiderDropInterval > 3.0f) {
+        spiderDropInterval -= 0.3f;
+    }
+    CGPoint endPoint = CGPointMake(spider.position.x, -1 * [spider texture].contentSize.height * 0.5);
+    CCMoveTo * move = [CCMoveTo actionWithDuration:spiderDropInterval position:endPoint];
+    CCEaseBackInOut * ease = [CCEaseBackInOut actionWithAction:move];
+    CCCallFuncN * func = [CCCallFuncN actionWithTarget:self selector:@selector(spiderArrivedEndPoint:)];
+    CCSequence * sequence = [CCSequence actions:ease, func, nil];
+    [spider runAction:sequence];
+}
+
+-(void)spiderArrivedEndPoint:(id)sender{
+    CCSprite * spider = (CCSprite *)sender;
+    CGPoint pos = spider.position;
+    CGSize screenSize = [[CCDirector sharedDirector]winSize];
+    pos.y = screenSize.height + [spider texture].contentSize.height * 0.5;
+    spider.position = pos;
 }
 
 -(void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration{
@@ -62,6 +126,11 @@
         alienVelocity = CGPointZero;
     }
     alien.position = pos;
+}
+
+-(void)dealloc{
+    [spiders release];
+    [super dealloc];
 }
 
 @end

@@ -12,6 +12,11 @@
 @interface GameScene : CCLayer {
     CCSprite * alien;
     CGPoint alienVelocity;
+    
+    CCArray * spiders;
+    float spiderDropInterval;
+    int numOfMovedSpiders;
 }
+
 +(id)scene;
 @end
