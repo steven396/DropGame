@@ -7,6 +7,7 @@
 //
 
 #import "GameScene.h"
+#import "SimpleAudioEngine.h"
 
 
 @implementation GameScene
@@ -37,7 +38,8 @@
 		scoreLabel.anchorPoint = CGPointMake(0.5f, 1.0f);
 		[self addChild:scoreLabel z:-1];
         
-        
+        [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"blues.mp3"];
+        [[SimpleAudioEngine sharedEngine]preloadEffect:@"alien-sfx.caf"];
     }
     return self;
 }
@@ -142,10 +144,11 @@
     
     totalTime += delta;
     int currenTime = (int)totalTime;
-    if (score < currenTime) {
+    if (score < currenTime) {//这个判断避免游戏卡顿，因为一秒有很多帧，会来到这里多次
         score = currenTime;
         [scoreLabel setString:[NSString stringWithFormat:@"%d",score]];
     }
+
 }
 
 -(void)checkDistance{
@@ -160,6 +163,7 @@
         }
         float currentDistance = ccpDistance(alien.position, spider.position);
         if (currentDistance < maxDistance) {
+            [[SimpleAudioEngine sharedEngine] playEffect:@"alien-sfx.caf"];
             [self resetSpiders];
         }
     }
