@@ -11,6 +11,7 @@
 
 @interface GameScene : CCLayer {
     CCSprite * alien;
+    CGPoint alienVelocity;
 }
 +(id)scene;
 @end
